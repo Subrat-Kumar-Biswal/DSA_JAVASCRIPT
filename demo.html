@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = [10, 20, 30, 40, 50, 60, 70, 80];
+        // let item = prompt("enter a number form the array")
+        // let position = undefined;
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (item == arr[i]) {
+        //         position = i;
+        //         break;
+        //     }
+        // }
+        // // console.log(position);
+        // if (!position) {
+        //     alert("element not found");
+        // }else{
+        //     alert("element position is " + position)
+        // }
+
+
+        let arr = [10, 20, 30, 40, 50, 60, 70, 80];
+        let find = 70;
+        let start = 0;
+        let end = arr.length - 1;
+
+        while (start <= end) {
+            let mid = Math.floor((start + end) / 2);
+            if (find === arr[mid]) {
+                console.log("element found at", mid);
+                break;
+            } else if (find < arr[mid]) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+
+        }
+        // alert("element not found ")
+
+
+    </script>
+</body>
+
+</html>

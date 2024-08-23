@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="number" id="newEl" placeholder="Enter element in the stack" style="padding: 10px;">
+    <button onclick="push()" style="padding: 10px;">Add element in stack</button>
+    <button onclick="pop()" style="padding: 10px;">Remove element in stack</button>
+    <button onclick="show()" style="padding: 10px;">Display element in stack</button>
+
+</body>
+<script>
+    let arr = [];
+    let currentSize = arr.length;
+    let max = 8;
+
+    function push() {
+        let newVal = document.getElementById('newEl').value
+        if (currentSize >= max) {
+            alert("Stack is full")
+        }
+        arr[currentSize] = newVal;
+        currentSize++;
+        console.log("element added");
+        document.getElementById('newEl').value = "";
+        console.log(arr);
+    }
+
+    function pop() {
+        if (currentSize > 0) {
+            currentSize -= 1;
+            arr.length = currentSize;
+        } else {
+            alert("stack is alredy empty")
+        }
+        console.log("Remove Element");
+        console.log(arr);
+    }
+
+
+    function show() {
+
+        console.log(arr);
+
+    }
+</script>
+
+</html>

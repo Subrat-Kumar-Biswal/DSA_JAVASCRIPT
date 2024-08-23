@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Node{
+            constructor(data){
+                this.head = {
+                    value: data,
+                    next: null,
+                };
+
+                this.tail = this.head;
+                this.size  = 1;
+            }
+
+            appendNode(nodeData){
+                let newNode = {
+                    value: nodeData,
+                    next: null,
+                }
+                this.tail.next = newNode;
+                this.tail = newNode; 
+                this.size+=1
+            }
+
+            traversing(){
+                let count = 0;
+                let currentNode = this.head;
+                while(count < this.size){
+                    currentNode = currentNode.next;
+                    console.log(currentNode);
+                    count++;
+
+                }
+            }
+        }
+
+        let node = new Node(10);
+        node.appendNode(100)
+        node.appendNode(200)
+        node.appendNode(300)
+        node.appendNode(400)
+        node.appendNode(500)
+        node.traversing();
+        console.log(node);
+    </script>
+</head>
+<body>
+    <h1>
+        first create a class, when class is created automaticaly object is created 
+    </h1>
+    <h2>
+        next we create a constructor
+    </h2>
+</body>
+</html>

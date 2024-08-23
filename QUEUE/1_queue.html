@@ -1,0 +1,51 @@
+array, stack,queue is the linear data structuret
+tree and graph is non-linear data structure.
+
+Enqueue = add item in the queue.
+Dequeue = Remove item in the queue
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>queue</title>
+</head>
+<body>
+    <script>
+        let queue = [];
+        let currentSize = queue.length;
+        let maxSize = 5;
+        function enqueue(newVal){
+            if(currentSize >= maxSize){
+                alert("queue is already full");
+            }else{
+            queue[currentSize] = newVal;
+            currentSize++;
+            }
+        }
+
+        function dequeue(){
+            if(currentSize < 0){
+                alert("queue is empty");
+            }else{
+                for(let i = 0; i<currentSize; i++){
+                    queue[i] = queue[i+1]
+                }
+                currentSize--;
+                queue.length = currentSize;
+            }
+        }
+
+        function display(){
+            console.log(queue);
+        }
+
+        enqueue(20)
+        dequeue()
+        display()
+    </script>
+</body>
+</html>

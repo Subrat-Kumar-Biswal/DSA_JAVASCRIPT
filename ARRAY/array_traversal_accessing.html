@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversal Accessing</title>
+    <!-- <style>
+        body{
+            background-color: black;
+        }
+    </style> -->
+    <script>
+       
+        let array = [4, 56, 85, 32, 51, 14, 23, 56, 98]
+
+        // for (let i = 0; i < array.length; i++) {
+        //     console.log(`The ${i} index value is ${array[i]}`);
+        // }
+
+                // array accessing
+        // let x = 5
+        // console.log(array[x])
+ 
+       function getElement(){
+        //validation
+        let el = document.getElementById('text').value
+        if(el < array.length && typeof parseInt(el) === "number"){
+            alert(array[el])
+        }else{
+            alert("enter a valid input");
+        }
+       }
+
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="text">
+    <button onclick="getElement()">Click me</button>
+</body>
+</html>

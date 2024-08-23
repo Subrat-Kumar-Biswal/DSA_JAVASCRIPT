@@ -1,0 +1,40 @@
+<!-- delete element in an array -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <script>
+        // let position = 4;
+        // console.log(data);
+        // for(let i = position; i < data.length-1; i++){
+            //     data[i] = data[i + 1]
+            //     // console.log(data[i]);
+            //     // console.log(data);
+            // }
+            // data.length = data.length - 1
+            // console.log(data);
+            
+            
+            // console.log(data);
+            
+            function DeleteEl(){
+
+            let data = [10, 20, 30, 40, 50, 60, 70, 80];
+            let position = document.getElementById('input').value;
+            position = parseInt(position);
+            for(let i = position; i < data.length -1 ; i++){
+                data[i] = data[i + 1];
+            }
+       
+            console.log(data);
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="text" name="box" id="input">
+    <button onclick="DeleteEl()">remove element</button>
+</body>
+</html>
