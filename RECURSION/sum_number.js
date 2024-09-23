@@ -1,10 +1,10 @@
 function sum(b){
-    let toala  = 0;
+    let total  = 0;
         for (let i = 0; i <= b; i++) {
-            toala = toala+i;   
-            // console.log(toala);        
+            total = total+i;   
+            // console.log(total);        
         }
-        console.log(toala)
+        console.log(total)
 }
 
 let s = sum(5);

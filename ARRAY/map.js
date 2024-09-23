@@ -32,5 +32,5 @@ const array = [[1, 2], [3, 4], [5, 6]];
 const flatArray = array.reduce((acc, current) => {
     return acc.concat(current)
  
-}, [12]);
+}, []);
 console.log(flatArray); // Output: [1, 2, 3, 4, 5, 6]

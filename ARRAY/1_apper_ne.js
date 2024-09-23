@@ -13,4 +13,4 @@ var singleNumber = function(nums) {
     }
 };
 
-console.log(singleNumber([2,2,1]))
+console.log(singleNumber([2,2,1,3,1]))
